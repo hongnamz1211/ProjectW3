@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+<script>
+    // let num = +prompt("Kiểm tra SNT");
+    // let check = true;
+    // if (num < 2) {
+    //     check = false;
+    // } else {
+    //     for (let i = 2; i < num; i++) {
+    //         if (num % i === 0) {
+    //             check = false;
+    //             break;
+    //         }
+    //     }
+    // }
+    // if (check) {
+    //     alert(num + " là số nguyên tố");
+    // } else {
+    //     alert(num + " không là số nguyên tố");
+    // }
+
+    // Hiển thị 20 SNT + số chính phương
+    let number = 20;
+    for (let count = 0; count < 20; ) {
+        let check = true;
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                check = false;
+                break;
+            }
+        } if (check) {
+            count++;
+            document.write(number + '<br>');
+        }
+        number++;
+    }
+
+
+</script>
+</body>
+</html>

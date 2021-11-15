@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vòng lặp 1</title>
+</head>
+<body>
+<script>
+    // Bai1
+    // for (let i = 0; i <= 100; i++) {
+    //     alert(i)
+    //     if (i === 99) {
+    //         alert("Hoàn thành")
+    //         break;
+    //     }
+    // }
+
+    // // Bai2
+    // let num = 0;
+    // while (num < 1000000000000000) {
+    //     let nhietDo = parseInt(prompt("Nhập nhiệt độ hiện tại"));
+    //     if (nhietDo > 100) {
+    //         alert("Giảm nhiệt độ");
+    //         num++;
+    //     } else if (nhietDo < 20) {
+    //         alert("Tăng nhiệt độ");
+    //         num++;
+    //     } else {
+    //         alert("OK");
+    //         break;
+    //     }
+    // }
+
+    // // Bai3
+    // let input = parseInt(prompt("Nhập số lượng số fibonacci"));
+    // let count = 0;
+    // let so1 = 0;
+    // document.write("1: " + so1 + "<br>");
+    // let so2 = 1;
+    // document.write("2: " + so2 + "<br>");
+    // let stt = 3;
+    // while (count < input - 2) {
+    //     let so3 = so1 + so2;
+    //     so1 = so2;
+    //     so2 = so3;
+    //     document.write(stt + ": " + so3 + "<br>")
+    //     count++;
+    //     stt++;
+    // }
+
+    // // Bai4
+    // let input = parseInt(prompt("Nhập số lượng số fibonacci"));
+    // let count = 0;
+    // let so1 = 0;
+    // document.write(so1 + "<br>");
+    // let so2 = 1;
+    // document.write(so2 + "<br>");
+    // while (count < input - 2) {
+    //     let so3 = so1 + so2;
+    //     so1 = so2;
+    //     so2 = so3;
+    //     document.write(so3 + "<br>");
+    //     if (so3 % 5 === 0) {
+    //         document.write("Số " + so3 + " chia hết cho 5");
+    //         break;
+    //     }
+    //     count++;
+    // }
+
+    // Bai5
+    // let total = +20;
+    // let count = 0;
+    // let so1 = 0;
+    // document.write("1: " + so1 + "<br>");
+    // let so2 = 1;
+    // document.write("2: " + so2 + "<br>");
+    // let stt = 3;
+    // while (stt < 21) {
+    //     let so3 = so1 + so2;
+    //     so1 = so2;
+    //     so2 = so3;
+    //     document.write(stt + ": " + so3 + "<br>")
+    //     count++;
+    //     stt++;
+    //     total += so3;
+    // }
+    // document.write("Tổng 20 số đầu tiên trong dãy fibonacci= " + total);
+
+    // //Bai6
+    // let num = 0;
+    // let tong30So = 30;
+    // let sum = 0;
+    // for (let i = 1; i < 500; i++) {
+    //     if (i % 7 === 0) {
+    //         document.write(i + '<br>');
+    //         sum += i;
+    //         num++;
+    //     }
+    //     if (num === tong30So) {
+    //         document.write("Tổng 20 số đầu tiên chia hết cho 7 = " + sum);
+    //         break;
+    //     }
+    // }
+
+    // // Bai7
+    // let num = 1;
+    // for (let i = 0; i < 100; i++) {
+    //     if (num % 3 === 0 && num % 5 === 0) {
+    //         document.write("FizzBuzz" + "<br>");
+    //     } else if (num % 3 === 0) {
+    //         document.write("Fizz" + "<br>");
+    //     } else if (num % 5 === 0) {
+    //         document.write("Buzz" + "<br>");
+    //     } else {
+    //         document.write(num + "<br>");
+    //     }
+    //     num++;
+    // }
+
+    // Bai8
+    function start() {
+        let num1 = parseInt(prompt("Nhập vào giá trị dưới: "))
+        let num2 = parseInt(prompt("Nhập vào giá trị trên: "))
+
+        //xử lý tình huống ng dùng nhập 2 số giống nhau
+        while (num1 === num2) {
+            alert("Nhập lại đi bạn eey!!")
+            num1 = parseInt(prompt("Nhập vào giá trị dưới: "))
+            num2 = parseInt(prompt("Nhập vào giá trị trên: "))
+        }
+        let result
+
+        //xử lý người dùng nhập ở khoảng bất kỳ
+        if (num1 < num2) {
+            result = Math.round(Math.random() * (num2 - num1))
+            result = result + num1
+        } else if (num1 > num2) {
+            result = Math.round(Math.random() * (num1 - num2) + num2)
+        }
+        let count = 1
+        let check = false
+        //bắt đầu chơi
+        alert("Đoán đi bạn eey!!!")
+        let guestNum = parseInt(prompt("Đoán lần " + count + ": "))
+
+        //lặp lại phần nhập giá trị đoán vs số lần nhất định
+        do {
+            //nếu thắng
+            if (guestNum === result) {
+                alert("You win!!")
+                check = true
+                break
+            } else if (guestNum < result) { //gợi ý khi đoán nhỏ hơn
+                alert("Đoán tăng lên đi!")
+                guestNum = parseInt(prompt("Đoán lần " + (count + 1) + ": "))
+                count++
+            } else { //gợi ý khi đoán to hơn
+                alert("Đoán giảm xuống đi!")
+                guestNum = parseInt(prompt("Đoán lần " + (count + 1) + ": "))
+                count++
+            }
+        }
+        while (count <= 2)
+
+        //nếu thua
+        if (check === false) {
+            alert("You die!")
+        }
+    }
+</script>
+</body>
+</html>
