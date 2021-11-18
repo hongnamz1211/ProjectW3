@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<label><input id="word" type="text"></label>
+<input id="btn" type="button" onclick="display()" value="Tra">
+<p id="tu-dien"></p>
+<script>
+    let tiengAnh = ["hello","bye","good night"];
+    let tiengViet = ["xin chào","tạm biệt","chúc ngủ ngon"];
+    function display() {
+        let word = document.getElementById("word").value;
+        let flag = false;
+        let index = 0;
+        for (let i = 0; i < tiengAnh.length; i++) {
+            if (word === tiengAnh[i]) {
+                flag = true;
+                index = tiengViet[i];
+                break;
+            }
+            if (word === tiengViet[i]) {
+                flag = true;
+                index = tiengAnh[i];
+                break;
+            }
+        }
+        if (flag) {
+            document.getElementById("tu-dien").innerText = index;
+        } else {
+            alert("Không tìm thấy");
+        }
+    }
+</script>
+</body>
+</html>
