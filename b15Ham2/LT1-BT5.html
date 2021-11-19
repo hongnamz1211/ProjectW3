@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LT2 BT5</title>
+</head>
+<body onload="display()">
+<script>
+    let input = prompt("Nhập tên ngôi sao");
+    let ngoiSao = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe", "Regulus"];
+    let chomSao = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+
+    function display() {
+        for (let i = 0; i < ngoiSao.length; i++) {
+            if (input === ngoiSao[i]) {
+                alert(chomSao[i]);
+            }
+        }
+    }
+</script>
+</body>
+</html>

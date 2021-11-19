@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 2</title>
+</head>
+<body>
+<script>
+    // // Bai1
+    // function tichBinhPhuong(num) {
+    //     num  = parseInt(prompt("Nhập số"));
+    //     return num**2 * num**2;
+    // }
+    // alert(tichBinhPhuong());
+
+    // // Bai2
+    // function sHinhTron(banKinh) {
+    //     return banKinh**2 * 3.14;
+    // }
+    // function cHinhTron(banKinh) {
+    //     return banKinh*2*3.14;
+    // }
+    // console.log(sHinhTron(3));
+    // console.log(cHinhTron(3));
+
+    // // Bai3
+    // function giaiThua(num) {
+    //     let count = 1;
+    //     for (let i = 1; i <= num ; i++) {
+    //         count *= i;
+    //     }
+    //     return count;
+    // }
+    // alert(giaiThua(4));
+
+    // // Bai4
+    // let input = prompt("Nhập giá trị");
+    // let flag = true;
+    // function abc(x) {
+    //     if (Number(x)) {
+    //         flag = true;
+    //     } else {
+    //         flag = false;
+    //     }
+    //     return flag;
+    // }
+    // console.log(abc(input));
+
+    // // Bai5
+    // let soA = +prompt("Nhập số thứ nhất");
+    // let soB = +prompt("Nhập số thứ hai");
+    // let soC = +prompt("Nhập số thứ ba");
+    //
+    // function minNumber(soA,soB,soC) {
+    //     if (soA < soB) {
+    //         if (soA < soC) {
+    //             return soA;
+    //         } else {
+    //             return soC;
+    //         }
+    //     } else if (soB < soC) {
+    //         return soB;
+    //     } else {
+    //         return soC;
+    //     }
+    // }
+    // alert(minNumber(soA,soB,soC));
+
+    // // Bai6
+    // let input = prompt("Nhập số bất kì");
+    // let flag = true;
+    // function number() {
+    //     if (input % 1 === 0 && input > 0) {
+    //         flag = true;
+    //     } else {
+    //         flag = false;
+    //     }
+    //     return flag;
+    // }
+    // console.log(number(input));
+
+    // // Bai7
+    // let num1 = +prompt("Nhập số thứ nhất");
+    // let num2 = +prompt("Nhập số thứ hai");
+    // function number(num1, num2) {
+    //     let num3 = num1;
+    //     num1 = num2;
+    //     num2 = num3;
+    //     return [num1,num2];
+    // }
+    // console.log(num1+  "," + num2);
+    // console.log(number(num1,num2));
+
+    // Bai8
+    // let array = [];
+    // while (array.length < 5) {
+    //     let number = prompt("Nhập số");
+    //     array.push(number);
+    //     console.log(array.toString());
+    // }
+    // let arr = array.reverse();
+    // console.log(arr.toString());
+
+    // Bai9
+    let arr1 = +prompt("Nhập 1 giá trị bất kì");
+    let arr2 = [1,1,2,2,2,3,4,4,5,6,"-","-",7,7,8,9,9,9];
+    function check(arr1,arr2) {
+        let count = 0;
+        for (let i = 0; i < arr2.length; i++) {
+            if (arr1 === arr2[i]) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            return count;
+        } else {
+            return -1;
+        }
+    }
+    console.log(check(arr1,arr2));
+
+
+</script>
+</body>
+</html>

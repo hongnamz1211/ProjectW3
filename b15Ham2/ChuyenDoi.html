@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feet và meters</title>
+</head>
+<body>
+<p><label><input type="number" placeholder="Nhập" id="input"></label></p>
+<label><input type="submit" onclick="footMeter()" id="foot-meters" value="Chuyển sang meters"></label>
+<label><input type="submit" onclick="footFeet()" id="foot-feet" value="Chuyển sang feet"></label>
+<p id="display"></p>
+<script>
+    function footMeter(foot) {
+        foot = document.getElementById('input').value;
+        document.getElementById('display').innerHTML = foot * 0.305 + " (meter)";
+    }
+    function footFeet(meter) {
+        meter = document.getElementById('input').value;
+        document.getElementById('display').innerHTML = meter * 3.279 + " (feet)";
+    }
+</script>
+</body>
+</html>

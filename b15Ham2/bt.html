@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let array = [];
+    // // function number(num) {
+    //     let count = 0;
+    //     while (array.length < 8) {
+    //         let num = prompt("Nhập");
+    //         if (num % 1 === 0 && num % 2 !== 0) {
+    //             array.push(num);
+    //             count++;
+    //             console.log(array);
+    //             if (count === 5) {
+    //                 break;
+    //             }
+    //         }
+    //         for (let j = 0; j < 3; j++) {
+    //             if (num % 1 !== 0 && num % 2 === 0) {
+    //                 break;
+    //             }
+    //         }
+    //         // return num;
+    //     // }
+    // }
+    // // arr = number(num);
+    // // console.log(arr);
+    // console.log(array);
+
+    // let array = new Array(num);
+    // let count = 0;
+    // let count1 = 1;
+    // function number(num,count,count1) {
+    //     for (let i = 0; i < 8; i++) {
+    //         let array[i] = prompt("Nhập");
+    //             if (num % 1 !== 0 || num % 2 !== 0) {
+    //                 count++;
+    //                 break;
+    //             }
+    //             if (num % 1 === 0 && num % 2 !== 0) {
+    //                 array.push(num);
+    //                 count1++;
+    //             }
+    //     }
+    // }
+
+
+    let result = new Array();
+    let count = 0;
+    function isPrime(number) {
+        if (number < 3) {
+            return false;
+        } else {
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % 1 === 0) {
+                    return false;
+                }
+            } return true
+        }
+    }
+    function check() {
+        for (let i = 0; i < 8; i++) {
+            num = +prompt()
+            if (isPrime(num)) {
+                result.push(num);
+            }
+            if (result.length === 5) {
+                return result;
+            } else {
+                count++;
+            }
+        }
+    }
+</script>
+</body>
+</html>
