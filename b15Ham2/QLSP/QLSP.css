@@ -1,0 +1,39 @@
+table {
+    width: 600px;
+}
+
+/*#name {*/
+/*    width: 50%;*/
+/*}*/
+
+input {
+    border-radius: 5px;
+    height: 20px;
+}
+
+.btn {
+    width: 70px;
+    border-radius: 5px;
+    height: 30px;
+    background-color: green;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f6f3ec;
+}
+
+td {
+    padding: 10px;
+}
+
+table, tr, td {
+    border-collapse: collapse;
+}
+
+#title {
+    background-color: #f6f3ec;
+    padding: 20px;
+    width: 52%;
+    border-radius: 10px;
+}
